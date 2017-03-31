@@ -1,0 +1,11 @@
+
+/vendor/
+/.idea
+/.settings
+!/vendor/composer/
+!/vendor/autoload.php
+/service_locator/
+/composer.phar
+/composer.lock
+/index.php
+/logfile.txt

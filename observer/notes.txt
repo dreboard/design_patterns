@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+$login->attach(new LogHandler());
+$login->attach(new EmailNotify());
+
+    public function attach(Observer $observer)
+    {
+        $this->observers[] = $observer;
+    }
+
+
+$login->attach(new LogHandler())->attach(new EmailNotify());
+
+    public function attach(Observer $observer)
+    {
+        $this->observers[] = $observer;
+        return $this;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

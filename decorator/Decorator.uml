@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\Design_Patterns\Decorator\BoldText</OriginalElement>
+  <nodes>
+    <node x="164.0" y="102.0">\Design_Patterns\Decorator\BoldText</node>
+    <node x="171.0" y="0.0">\Design_Patterns\Decorator\DecoratorInterface</node>
+    <node x="348.0" y="102.0">\Design_Patterns\Decorator\StripTagsText</node>
+    <node x="0.0" y="113.0">\Design_Patterns\Decorator\PrintString</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\Design_Patterns\Decorator\StripTagsText" target="\Design_Patterns\Decorator\DecoratorInterface">
+      <point x="0.0" y="-60.0" />
+      <point x="430.0" y="77.0" />
+      <point x="296.0" y="77.0" />
+      <point x="50.0" y="26.0" />
+    </edge>
+    <edge source="\Design_Patterns\Decorator\PrintString" target="\Design_Patterns\Decorator\DecoratorInterface">
+      <point x="0.0" y="-49.0" />
+      <point x="72.0" y="77.0" />
+      <point x="196.0" y="77.0" />
+      <point x="-50.0" y="26.0" />
+    </edge>
+    <edge source="\Design_Patterns\Decorator\BoldText" target="\Design_Patterns\Decorator\DecoratorInterface">
+      <point x="0.0" y="-60.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.4000000000000004" x="158.4999999999999" y="135.7142857142857" />
+  <SelectedNodes>
+    <node>\Design_Patterns\Decorator\BoldText</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Constants</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

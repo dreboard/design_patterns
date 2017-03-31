@@ -1,0 +1,22 @@
+{
+  "name": "design_patterns/design_patterns",
+  "description": "Basic php design patterns",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dre Board",
+      "email": "dreboard@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "5.7.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Design_Patterns\\Observer\\": ["observer/classes", "observer/tests"],
+      "Design_Patterns\\Decorator\\": ["decorator/classes", "decorator/tests"],
+      "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"]
+    }
+  }
+}

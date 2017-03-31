@@ -2,6 +2,8 @@
 namespace Design_Patterns\Decorator;
 
 /**
+ * BoldText class
+ *
  * @package Design_Patterns\Decorator
  */
 class BoldText implements DecoratorInterface

@@ -1,4 +1,4 @@
-#PHP Design Patterns Reference and Examples
+# PHP Design Patterns Examples
 Sample code for several design patterns in PHP to demonstrate the basic fundamentals of behavioral, creational and structural patterns.  
 
 Code also shows the ability to test different oop code bases with phpunit, makdown knowledge and git versioning and tagging.  

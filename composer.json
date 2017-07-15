@@ -16,7 +16,8 @@
     "psr-4": {
       "Design_Patterns\\Observer\\": ["observer/classes", "observer/tests"],
       "Design_Patterns\\Decorator\\": ["decorator/classes", "decorator/tests"],
-      "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"]
+      "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"],
+      "Design_Patterns\\TemplateMethod\\": ["template_method/classes", "template_method/tests"]
     }
   }
 }

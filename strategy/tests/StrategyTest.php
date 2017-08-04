@@ -26,6 +26,6 @@ class DecoratorTest extends TestCase
      */
     public function testFileLogger()
     {
-        $this->assertNull($this->app->logit('Some data', new Design_Patterns\Strategy\FileLogger()));
+        $this->assertNull($this->app->logit('Some data', new Design_Patterns\Strategy\FileILogger()));
     }
 }

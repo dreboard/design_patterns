@@ -55,7 +55,7 @@ class SquareShape extends ShapeBase {
 
 }
 
-$ts = (new CircleShape())->makeShape();
+$ts = (new CircleShape())->drawShape();
 
-$vs = (new SquareShape())->makeShape();
+$vs = (new SquareShape())->drawShape();
 

@@ -11,7 +11,7 @@ use Monolog\Handler\StreamHandler as StreamHandler;
  *
  * @package Design_Patterns\Strategy
  */
-class FileLogger implements ILogger
+class FileILogger implements ILogger
 {
 
     /**

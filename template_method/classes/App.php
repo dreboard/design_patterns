@@ -8,11 +8,11 @@ class App
      * Log data
      *
      * @param string $data
-     * @param Logger $logger
+     * @param ILogger $logger
      */
-    public function logit($data, Logger $logger = null)
+    public function logit($data, ILogger $logger = null)
     {
-        $logger = $logger ?: new FileLogger();
+        $logger = $logger ?: new FileILogger();
         $logger->log($data);
     }
 }

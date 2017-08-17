@@ -8,3 +8,8 @@
 /logfile.txt
 /strategy/strategy.php
 /chain_of_responsibility/all.php
+/chain_of_responsibility/index_backup.php
+/assets/
+/.vagrant/
+/dev_ops/
+/logs.log

@@ -3,3 +3,4 @@ The Decorator Pattern is a method for changing the functionality of a class with
 
 ##Test
 tests/DecoratorTest.php
+![GitHub Logo](diagram.png)

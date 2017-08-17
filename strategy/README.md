@@ -6,3 +6,5 @@ Logging classes (email, file and database) use:
 - Monolog MySQL Handler
 ##Test
 tests/StrategyTest.php
+
+![GitHub Logo](diagram.png)

@@ -21,6 +21,7 @@
       "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"],
       "Design_Patterns\\Database\\": ["database/classes", "database/tests"],
       "Design_Patterns\\TemplateMethod\\": ["template_method/classes", "template_method/tests"],
+      "Design_Patterns\\Singleton\\": ["Singleton/classes", "Singleton/tests"],
       "Design_Patterns\\ChainOfResponsibility\\": ["chain_of_responsibility/classes", "chain_of_responsibility/tests"]
     }
   }

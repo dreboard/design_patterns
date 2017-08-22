@@ -1,5 +1,5 @@
 <?php
-//namespace Design_Patterns\Registry;
+namespace Design_Patterns\Registry;
 
 /**
  * Registry Pattern Example
@@ -63,6 +63,9 @@ class Registry {
 /// //As a singleton
 
 class TesterClass {
+    /**
+     * @param $arg
+     */
     public function testMethod($arg)
     {
         echo "Hello from __CLASS__";
@@ -73,9 +76,15 @@ class MyRegistry {
     private static $instance;
     
     private $storage;
-    
+
+    /**
+     * MyRegistry constructor.
+     */
     private function __construct() {}
 
+    /**
+     * @return MyRegistry
+     */
     public static function getInstance()
     {
         if (!self::$instance instanceof self){
@@ -84,11 +93,19 @@ class MyRegistry {
         return self::$instance;
     }
 
+    /**
+     * @param $key
+     * @param $val
+     */
     public function __set($key, $val)
     {
         $this->storage[$key] = $val;
     }
 
+    /**
+     * @param $key
+     * @return bool
+     */
     public function __get($key)
     {
         if(isset($this->storage[$key])){

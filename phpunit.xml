@@ -17,5 +17,10 @@
             <directory>./template_method/classes</directory>
             <file>./template_method/tests/test.php</file>
         </testsuite>
+        <testsuite name="singleton">
+            <directory>./singleton/classes</directory>
+            <file>./singleton/tests/test.php</file>
+        </testsuite>
     </testsuites>
 </phpunit>
+

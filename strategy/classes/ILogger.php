@@ -2,10 +2,11 @@
 namespace Design_Patterns\Strategy;
 
 /**
+ * Interface ILogger
  * @package Design_Patterns\Strategy
  */
 
-interface Logger
+interface ILogger
 {
     /**
      * Log data
@@ -13,5 +14,5 @@ interface Logger
      * @param string $text
      * @return mixed
      */
-    public function log($text);
+    public function log(string $text);
 }

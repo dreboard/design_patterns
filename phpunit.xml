@@ -5,9 +5,22 @@
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true">
     <testsuites>
-        <testsuite name="Basics">
-            <directory>./tests</directory>
-            <file>./classes/Basics.php</file>
+        <testsuite name="Chain of responsibility">
+            <directory>./chain_of_responsibility/classes</directory>
+            <file>./chain_of_responsibility/tests/test.php</file>
+        </testsuite>
+        <testsuite name="strategy">
+            <directory>./strategy/classes</directory>
+            <file>./strategy/tests/test.php</file>
+        </testsuite>
+        <testsuite name="template_method">
+            <directory>./template_method/classes</directory>
+            <file>./template_method/tests/test.php</file>
+        </testsuite>
+        <testsuite name="singleton">
+            <directory>./singleton/classes</directory>
+            <file>./singleton/tests/test.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
+

@@ -4,34 +4,58 @@ namespace Design_Patterns\TemplateMethod;
 /**
  * @package Design_Patterns\TemplateMethod
  */
+abstract class ShapeBase {
 
-abstract class Book {
-    protected $title;
-    protected $content;
-
-    function setTitle( $str )
+    function makeShape( )
     {
-        $this->title = $str;
+        return $this
+            ->drawBorder()
+            ->innerColor()
+            ->borderColor()
+            ->drawShape();
     }
 
-    function setContent( $str )
+    function drawBorder( )
     {
-        $this->content = $str;
+        var_dump("Drawing border");
+        return $this;
     }
+    function innerColor( )
+    {
+        var_dump("Filling with color");
+        return $this;
+    }
+
+    function borderColor( )
+    {
+        var_dump("Coloring border");
+        return $this;
+    }
+
+    protected abstract function drawShape( );
 }
 
-class Paperback extends Book {
+class CircleShape extends ShapeBase {
 
-    function printBook()
+    function drawShape( )
     {
-        var_dump("The book '{$this->title}' was printed.");
+        echo "Drawing square and Calculating area";
+        return $this;
     }
+
+
+}
+class SquareShape extends ShapeBase {
+
+    function drawShape( )
+    {
+        echo "Drawing circle and calculating radius";
+        return $this;
+    }
+
 }
 
-class Ebook extends Book {
+$ts = (new CircleShape())->drawShape();
 
-    function generatePdf()
-    {
-        var_dump("A PDF was generated for the eBook '{$this->title}'.");
-    }
-}
+$vs = (new SquareShape())->drawShape();
+

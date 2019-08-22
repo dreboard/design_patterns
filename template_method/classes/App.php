@@ -1,5 +1,5 @@
 <?php
-namespace Design_Patterns\Strategy;
+namespace Design_Patterns\TemplateMethod;
 
 
 class App

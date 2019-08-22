@@ -1,0 +1,6 @@
+[2017-08-04 04:26:52] name.WARNING: Foo [] []
+[2017-08-04 04:26:52] name.ERROR: Bar [] []
+[2017-08-04 04:27:35] name.WARNING: Foo [] []
+[2017-08-04 04:27:35] name.ERROR: Bar [] []
+[2017-08-04 04:32:56] file_logger.WARNING: Some data From class Design_Patterns\Strategy\FileLogger2 [] []
+[2017-08-04 04:32:56] name.WARNING: Test warning message [] []

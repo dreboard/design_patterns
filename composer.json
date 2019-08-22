@@ -10,13 +10,14 @@
     }
   ],
   "require-dev": {
-    "phpunit/phpunit": "5.7.5"
+    "phpunit/phpunit": "^8"
   },
   "autoload": {
     "psr-4": {
       "Design_Patterns\\Observer\\": ["observer/classes", "observer/tests"],
       "Design_Patterns\\Decorator\\": ["decorator/classes", "decorator/tests"],
-      "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"]
+      "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"],
+      "Design_Patterns\\NullObject\\": ["null_object/classes", "null_object/tests"]
     }
   }
 }

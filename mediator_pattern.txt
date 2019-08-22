@@ -1,0 +1,62 @@
+<?php
+abstract class Observable {
+    private $observers = [];
+    public function register($observer){
+        $this->observers[] = $observer;
+    }
+    protected function notify($hint){
+        foreach ($this->observers as $observer){
+            $observer->update($hint);
+        }
+    }
+}
+
+interface UserAddress {
+    public function setAddress($address);
+}
+
+/*
+* The affected class
+*/
+class OrderDelivery implements UserAddress {
+    private $deliveryAddress;
+    public function setAddress($address){
+        $this->deliveryAddress = $address;
+    }
+
+}
+class Mediator {
+    private $observedClass;
+    private $affectedClass;
+
+    public function __construct(Observable $observedClass, UserAddress $affectedClass){
+        $this->observedClass = $observedClass;
+        $this->affectedClass = $affectedClass;
+        $this->observedClass->register($this);
+    }
+    public function update($address){
+        $this->affectedClass->setAddress($address);
+    }
+}
+class UserDetails extends Observable {
+    private $address;
+    public function changeAddress($address){
+        $this->address = $address;
+        $this->notify($address);
+    }
+}
+class UserUpdater extends Observable {
+    public function updateUserAddress($address){
+        $user = new UserDetails();
+        $user->changeAddress($address);
+    }
+}
+
+function gooseFilter($birds) {
+    $geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    $filtered = array_filter($birds, function($v, $k) use ($geese){
+        if(in_array($v, $geese)){
+            unset($k);}
+    }, ARRAY_FILTER_USE_BOTH);
+    return $filtered;
+}

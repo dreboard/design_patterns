@@ -8,5 +8,8 @@ Code also shows the ability to test different oop code bases with phpunit, makdo
 * **Observer:** An object notifies other object(s) if it changes.
 * **Strategy:** 	An object controls which of a family of methods is called. Each method is in its` own class that extends a common base class.
 * **Chain Of Responsibility:** A behavioral design pattern that processes a request through a series of handlers/receivers objects.
+* **Null Object:** Using instances of a concrete class that implements a known interface, instead of null references.
+* **Front Controller:** All requests that come for a resource in an application will be handled by a single handler.
+* **Facade:** A structural design pattern that provides a simplified (but limited) interface to a complex system of classes, library or framework.
 
 

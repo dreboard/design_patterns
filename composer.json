@@ -10,27 +10,21 @@
     }
   ],
   "require-dev": {
-<<<<<<< HEAD
-    "phpunit/phpunit": "^8"
-=======
-    "phpunit/phpunit": "6.2.*",
+    "phpunit/phpunit": "^8",
     "monolog/monolog": "1.23.*",
     "wazaari/monolog-mysql": ">1.0.0"
->>>>>>> 43e31009794b728aa5ffcc19b7fe0e5bda4d25e8
   },
   "autoload": {
     "psr-4": {
       "Design_Patterns\\Observer\\": ["observer/classes", "observer/tests"],
       "Design_Patterns\\Decorator\\": ["decorator/classes", "decorator/tests"],
       "Design_Patterns\\Strategy\\": ["strategy/classes", "strategy/tests"],
-<<<<<<< HEAD
-      "Design_Patterns\\NullObject\\": ["null_object/classes", "null_object/tests"]
-=======
+      "Design_Patterns\\NullObject\\": ["null_object/classes", "null_object/tests"],
       "Design_Patterns\\Database\\": ["database/classes", "database/tests"],
       "Design_Patterns\\TemplateMethod\\": ["template_method/classes", "template_method/tests"],
       "Design_Patterns\\Singleton\\": ["Singleton/classes", "Singleton/tests"],
-      "Design_Patterns\\ChainOfResponsibility\\": ["chain_of_responsibility/classes", "chain_of_responsibility/tests"]
->>>>>>> 43e31009794b728aa5ffcc19b7fe0e5bda4d25e8
+      "Design_Patterns\\ChainOfResponsibility\\": ["chain_of_responsibility/classes", "chain_of_responsibility/tests"],
+      "Design_Patterns\\Facade\\": ["facade/classes", "facade/tests"]
     }
   }
 }

@@ -9,6 +9,7 @@ class Application
 {
     /**
      * @param CommandInterface $command
+     * @return mixed|void
      */
     public function run(CommandInterface $command = null)
     {

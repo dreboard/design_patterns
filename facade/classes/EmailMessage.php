@@ -9,6 +9,7 @@ namespace Design_Patterns\Facade;
 class EmailMessage implements MessageInterface {
 
     /**
+     * send message by email
      * @param string $message
      */
     public function setMessage(string $message)

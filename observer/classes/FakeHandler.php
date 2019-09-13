@@ -2,6 +2,10 @@
 namespace Design_Patterns\Observer;
 
 
+/**
+ * Class FakeHandler
+ * @package Design_Patterns\Observer
+ */
 class FakeHandler {
 
     /**

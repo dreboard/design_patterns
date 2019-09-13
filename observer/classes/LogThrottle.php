@@ -2,6 +2,10 @@
 namespace Design_Patterns\Observer;
 
 
+/**
+ * Class LogThrottle
+ * @package Design_Patterns\Observer
+ */
 class LogThrottle implements Observer {
 
     /**

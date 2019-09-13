@@ -2,6 +2,10 @@
 namespace Design_Patterns\Observer;
 
 
+/**
+ * Class LogHandler
+ * @package Design_Patterns\Observer
+ */
 class LogHandler implements Observer {
 
     /**

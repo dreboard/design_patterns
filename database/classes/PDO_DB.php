@@ -59,7 +59,7 @@ class PDO_DB
     }
 
     /**
-     *
+     * Prevent cloning of singleton object
      */
     private function __clone() {
         // Stopping Clonning of Object

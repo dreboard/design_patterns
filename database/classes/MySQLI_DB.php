@@ -61,7 +61,7 @@ class MySQLI_DB
 
 
     /**
-     *
+     * Prevent cloning of singleton object
      */
     private function __clone() { }
 

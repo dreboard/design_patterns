@@ -1,16 +1,42 @@
 <?php
 namespace Design_Patterns\FrontController;
 
+/**
+ * Class FrontController
+ * @package Design_Patterns\FrontController
+ */
 class FrontController implements FrontControllerInterface
 {
+    /**
+     *
+     */
     const DEFAULT_CONTROLLER = "IndexController";
+    /**
+     *
+     */
     const DEFAULT_ACTION     = "index";
-    
+
+    /**
+     * @var string
+     */
     protected $controller    = self::DEFAULT_CONTROLLER;
+    /**
+     * @var string
+     */
     protected $action        = self::DEFAULT_ACTION;
+    /**
+     * @var array
+     */
     protected $params        = array();
+    /**
+     * @var string
+     */
     protected $basePath      = "mybasepath/";
-    
+
+    /**
+     * FrontController constructor.
+     * @param array $options
+     */
     public function __construct(array $options = array()) {
         if (empty($options)) {
            $this->parseUri();
@@ -27,7 +53,10 @@ class FrontController implements FrontControllerInterface
             }
         }
     }
-    
+
+    /**
+     *
+     */
     protected function parseUri() {
         $path = trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
         $path = preg_replace('/[^a-zA-Z0-9]//', "", $path);
@@ -45,7 +74,11 @@ class FrontController implements FrontControllerInterface
             $this->setParams(explode("/", $params));
         }
     }
-    
+
+    /**
+     * @param $controller
+     * @return $this
+     */
     public function setController($controller) {
         $controller = ucfirst(strtolower($controller)) . "Controller";
         if (!class_exists($controller)) {
@@ -55,7 +88,11 @@ class FrontController implements FrontControllerInterface
         $this->controller = $controller;
         return $this;
     }
-    
+
+    /**
+     * @param $action
+     * @return $this
+     */
     public function setAction($action) {
         $reflector = new ReflectionClass($this->controller);
         if (!$reflector->hasMethod($action)) {
@@ -65,12 +102,19 @@ class FrontController implements FrontControllerInterface
         $this->action = $action;
         return $this;
     }
-    
+
+    /**
+     * @param array $params
+     * @return $this
+     */
     public function setParams(array $params) {
         $this->params = $params;
         return $this;
     }
-    
+
+    /**
+     *
+     */
     public function run() {
         call_user_func_array(array(new $this->controller, $this->action), $this->params);
     }

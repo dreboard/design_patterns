@@ -2,6 +2,10 @@
 namespace Design_Patterns\TemplateMethod;
 
 
+/**
+ * Class App
+ * @package Design_Patterns\TemplateMethod
+ */
 class App
 {
     /**

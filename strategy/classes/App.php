@@ -2,6 +2,10 @@
 namespace Design_Patterns\Strategy;
 
 
+/**
+ * Class App
+ * @package Design_Patterns\Strategy
+ */
 class App
 {
     /**

@@ -9,13 +9,37 @@
 namespace Design_Patterns\Database;
 
 
+/**
+ * Class User
+ * @package Design_Patterns\Database
+ */
 class User
 {
+    /**
+     * @var mixed
+     */
     public $id;
+    /**
+     * @var mixed
+     */
     public $username;
+    /**
+     * @var mixed
+     */
     public $firstname;
+    /**
+     * @var mixed
+     */
     public $lastname;
+    /**
+     * @var mixed
+     */
     public $email;
+
+    /**
+     * User constructor.
+     * @param null $data
+     */
     public function __construct($data = null)
     {
         if (is_array($data)) {
@@ -27,6 +51,11 @@ class User
             $this->email = $data['email'];
         }
     }
+
+
+    /**
+     *
+     */
     public function getFullname()
     {
         echo $this->firstname . ' ' . $this->lastname;

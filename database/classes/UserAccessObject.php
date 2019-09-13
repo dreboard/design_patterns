@@ -9,15 +9,27 @@
 namespace Design_Patterns\Database;
 
 
+/**
+ * Class UserAccessObject
+ * @package Design_Patterns\Database
+ */
 class UserAccessObject
 {
 
+    /**
+     * UserAccessObject constructor.
+     * @param $db
+     */
     public function __construct($db)
     {
         $this->db = $db;
         
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function find($id)
     {
         $stmt = $this->db->prepare('
@@ -35,6 +47,10 @@ class UserAccessObject
         $stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
         return $stmt->fetch();
     }
+
+    /**
+     * @return mixed
+     */
     public function findAll()
     {
         $stmt = $this->db->prepare('
@@ -48,6 +64,11 @@ class UserAccessObject
         //    echo $users[0]->firstname;
         return $stmt->fetchAll();
     }
+
+    /**
+     * @param \User $user
+     * @return mixed
+     */
     public function save(\User $user)
     {
         // If the ID is set, we're updating an existing record
@@ -66,6 +87,11 @@ class UserAccessObject
         $stmt->bindParam(':email', $user->email);
         return $stmt->execute();
     }
+
+    /**
+     * @param \User $user
+     * @return mixed
+     */
     public function update(\User $user)
     {
         if (!isset($user->id)) {
